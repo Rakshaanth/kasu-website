@@ -1,0 +1,161 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><title>Kāsu Privacy Policy</title><meta name="claude:viewport-fit-sides" content="cover"><meta name="description" content="How Kāsu handles your data. Short version: it stays on your phone."><meta property="og:title" content="Kāsu Privacy Policy"><meta property="og:description" content="How Kāsu handles your data. Short version: it stays on your phone."><meta name="theme-color" content="#EFE7D7"><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='15' fill='%23EFE7D7'/%3E%3Cpath fill='%231F4E4A' d='M14 50V27h3v-4h4v-4h6v-4h10v4h6v4h4v4h3v23z'/%3E%3Crect x='12' y='52' width='40' height='2' fill='%23A8874B'/%3E%3Crect x='10' y='56' width='44' height='1' fill='%23A8874B'/%3E%3C/svg%3E"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..800;1,6..96,400..800&amp;family=Josefin+Sans:wght@400;500;600&amp;display=swap"><style>
+/* layout: sand paper ground, a 1200px column, full-width sea green and ink bands for rhythm */
+:root{
+  --sand:#EFE7D7; --sand2:#E3D8C3; --stucco:#CFC2A8; --line:#BFB196; --hair:#D6CAB1;
+  --ink:#1B1A17; --ink2:#3E3A33; --muted:#5E574B; --faint:#8E8473;
+  --sea:#1F4E4A; --sea-ink:#BFD0C8; --brass:#A8874B; --brass-l:#C9A76A; --terra:#C2603F;
+  --serif:'Bodoni Moda', 'Didot', 'Bodoni 72', Georgia, serif;
+  --sans:'Josefin Sans', 'Futura', ui-sans-serif, system-ui, sans-serif;
+  --gutter:max(clamp(16px,4vw,32px), env(safe-area-inset-left,0px));
+  --gutter-r:max(clamp(16px,4vw,32px), env(safe-area-inset-right,0px));
+  --ease:cubic-bezier(.2,.8,.2,1);
+  --arch:polygon(0 100%, 0 30%, 7% 30%, 7% 20%, 16% 20%, 16% 10%, 29% 10%, 29% 0, 71% 0, 71% 10%, 84% 10%, 84% 20%, 93% 20%, 93% 30%, 100% 30%, 100% 100%);
+  color-scheme:light;
+}
+html{background:var(--sand)}
+body{background:var(--sand);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.5;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--sand)}
+.grain{position:fixed;inset:0;pointer-events:none;z-index:70;opacity:.07;mix-blend-mode:multiply;background-image:var(--grain,none)}
+a{color:var(--sea)} a:hover{color:var(--ink)}
+:focus-visible{outline:2px solid var(--terra);outline-offset:3px;border-radius:6px}
+h1,h2,h3{margin:0;text-wrap:balance;font-weight:700}
+p{margin:0}
+.wrap{max-width:1200px;margin-inline:auto;padding-left:var(--gutter);padding-right:var(--gutter-r)}
+.serif{font-family:var(--serif);font-variation-settings:'opsz' 40}
+.acc{font-style:italic;color:var(--sea)}
+.h-sec{font-family:var(--serif);font-weight:700;font-variation-settings:'opsz' 48;font-size:clamp(44px,5.6vw,80px);line-height:.98;letter-spacing:-.01em}
+.lede{font-size:clamp(18px,1.6vw,21px);line-height:1.55;color:var(--ink2);max-width:30em}
+.arch{display:block;clip-path:var(--arch);background:var(--sea);position:relative}
+.rays{position:absolute;inset:0;background:repeating-conic-gradient(from 270deg at 50% 100%, rgba(201,167,106,.34) 0deg .7deg, transparent .7deg 7.5deg)}
+.rule2{display:flex;flex-direction:column;gap:3px}
+.rule2::before{content:"";height:3px;background:var(--brass)}
+.rule2::after{content:"";height:1px;margin-inline:-10px;background:var(--brass)}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;height:56px;padding:0 28px;border-radius:28px;font-weight:600;font-size:16px;letter-spacing:.02em;text-decoration:none;transition:background-color .3s,color .3s,box-shadow .3s;will-change:transform}
+.btn-solid{background:var(--ink);color:var(--sand);box-shadow:inset 0 0 0 4px var(--ink),inset 0 0 0 5px var(--brass)}
+.btn-solid:hover{background:var(--sea);color:var(--sand);box-shadow:inset 0 0 0 4px var(--sea),inset 0 0 0 5px var(--brass-l)}
+.btn-ghost{color:var(--ink);box-shadow:inset 0 0 0 1px var(--line)}
+.btn-ghost:hover{color:var(--ink);box-shadow:inset 0 0 0 1px var(--sea)}
+
+.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:rgba(239,231,215,.86);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);border-bottom:1px solid var(--hair);transition:transform .45s var(--ease)}
+.nav.tuck{transform:translateY(-110%)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:72px}
+.mark{display:flex;align-items:flex-end;gap:10px;text-decoration:none;color:var(--ink)}
+.mark:hover{color:var(--ink)}
+.mark .arch{width:22px;height:26px;transition:transform .5s var(--ease);transform-origin:bottom}
+.mark:hover .arch{transform:scaleY(1.12)}
+.mark b{font-family:var(--serif);font-weight:700;font-variation-settings:'opsz' 20;font-size:27px;line-height:.85}
+.nav-links{display:flex;align-items:center;gap:2px}
+.nav-links a{display:flex;align-items:center;height:44px;padding:0 12px;color:var(--muted);text-decoration:none;font-size:15px;transition:color .2s}
+.nav-links a:hover,.nav-links a[aria-current="page"]{color:var(--ink)}
+.nav-links a.nav-cta{height:44px;padding:0 20px;margin-left:8px;border-radius:22px;background:var(--ink);color:var(--sand);font-weight:600;box-shadow:inset 0 0 0 3px var(--ink),inset 0 0 0 4px var(--brass)}
+.nav-links a.nav-cta:hover{background:var(--sea);box-shadow:inset 0 0 0 3px var(--sea),inset 0 0 0 4px var(--brass-l)}
+@media (max-width:720px){.nav-links a.opt{display:none}}
+
+.foot{border-top:1px solid var(--hair)}
+.foot .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:20px 40px;padding-block:40px 48px}
+.foot-id{display:flex;flex-wrap:wrap;align-items:flex-end;gap:6px 16px}
+.foot-id .mark b{font-size:24px}
+.foot-id span{font-size:14px;color:var(--muted)}
+.foot-links{display:flex;flex-wrap:wrap;gap:0 4px}
+.foot-links a{display:flex;align-items:center;height:44px;padding:0 10px;color:var(--muted);text-decoration:none;font-size:15px}
+.foot-links a:hover{color:var(--ink)}
+
+.copy{display:inline-flex;align-items:center;gap:6px;height:36px;padding:0 14px;border:0;border-radius:18px;background:var(--sand2);color:var(--ink);font:inherit;font-size:14px;cursor:pointer}
+.copy:hover{background:var(--stucco)}
+
+.rise{animation:rise 1s var(--ease) both}
+.rise.d1{animation-delay:.08s}.rise.d2{animation-delay:.16s}.rise.d3{animation-delay:.24s}
+@keyframes rise{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important;scroll-behavior:auto!important}}
+
+.sub{padding-block:88px 120px}
+.sub-in{display:flex;flex-wrap:wrap;align-items:flex-start;gap:56px 96px}
+.sub-h{font-family:var(--serif);font-weight:700;font-variation-settings:'opsz' 72;font-size:clamp(50px,6.6vw,96px);line-height:.96;letter-spacing:-.015em}
+.sub-arch{display:flex;flex-direction:column;width:76px;margin-bottom:6px}
+.sub-arch .arch{height:90px;transform-origin:50% 100%;animation:grow 1.2s var(--ease) both}
+.sub-arch .rule2{margin-top:4px}
+@keyframes grow{from{transform:scaleY(0)}to{transform:none}}
+.side{flex:1 1 340px;min-width:0;display:flex;flex-direction:column;gap:22px}
+.mailcard{display:flex;flex-direction:column;gap:14px;margin-top:16px;padding:30px;background:var(--sand2);box-shadow:inset 0 0 0 6px var(--sand2),inset 0 0 0 7px var(--brass)}
+.mailcard h2{font-family:var(--serif);font-size:30px}
+.mailrow{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px}
+.mailrow a{font-size:18px;text-decoration:none;user-select:all}
+.mailcard p{font-size:15px;line-height:1.6;color:var(--muted)}
+.mailcard .copy{background:var(--sand)}
+.faq{flex:2 1 520px;min-width:0}
+.faq>h2{margin-bottom:12px;font-family:var(--serif);font-size:26px}
+.qa{border-top:1px solid var(--line)} .qa:last-child{border-bottom:1px solid var(--line)}
+.qa h3{font-size:inherit;font-weight:inherit}
+.qa button{width:100%;min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:18px 0;border:0;background:none;color:var(--ink);font:inherit;font-size:clamp(18px,1.6vw,21px);text-align:left;cursor:pointer}
+.qa button:hover{color:var(--sea)}
+.pm{position:relative;width:18px;height:18px;flex-shrink:0}
+.pm::before,.pm::after{content:"";position:absolute;left:0;top:8px;width:18px;height:1.5px;background:var(--sea);transition:transform .4s var(--ease)}
+.pm::after{transform:rotate(90deg)}
+.qa.open .pm::after{transform:rotate(0)}
+.ans{display:grid;grid-template-rows:0fr;transition:grid-template-rows .5s var(--ease)}
+.qa.open .ans{grid-template-rows:1fr}
+.ans>div{overflow:hidden}
+.ans p{padding:0 48px 26px 0;font-size:17px;line-height:1.65;color:var(--muted);opacity:0;transform:translateY(-8px);transition:opacity .4s,transform .5s var(--ease)}
+.qa.open .ans p{opacity:1;transform:none}
+
+.toc{flex:1 1 220px;min-width:0;position:sticky;top:calc(env(safe-area-inset-top,0px) + 100px);display:flex;flex-direction:column}
+.toc>span{margin-bottom:10px;font-size:14px;color:var(--muted)}
+.toc a{position:relative;display:flex;align-items:center;min-height:40px;padding-left:20px;font-size:15px;color:var(--muted);text-decoration:none;transition:color .25s}
+.toc a::before{content:"";position:absolute;left:0;top:50%;width:9px;height:11px;margin-top:-6px;background:var(--stucco);clip-path:var(--arch);transition:background-color .3s,transform .3s var(--ease);transform-origin:50% 100%}
+.toc a:hover,.toc a.on{color:var(--ink)}
+.toc a.on::before{background:var(--sea);transform:scaleY(1.3)}
+@media (max-width:860px){.toc{position:static}}
+.legal{flex:3 1 560px;min-width:0;max-width:720px;display:flex;flex-direction:column;gap:52px}
+.legal header{display:flex;flex-direction:column;gap:18px}
+.legal .meta{font-size:15px;color:var(--muted)}
+.legal section{display:flex;flex-direction:column;gap:14px;scroll-margin-top:100px;transition:opacity .8s var(--ease),transform .9s var(--ease)}
+.legal h2{font-family:var(--serif);font-size:30px}
+.legal p,.legal li{font-size:17px;line-height:1.7;color:var(--ink2)}
+.tldr{padding:32px;background:var(--sea);color:var(--sand);box-shadow:inset 0 0 0 6px var(--sea),inset 0 0 0 7px var(--brass-l)}
+.tldr h2{color:var(--sand)}
+.tldr ul{margin:16px 0 0;padding-left:20px;display:flex;flex-direction:column;gap:10px}
+.tldr li{color:var(--sand)}
+.js .legal section.hide{opacity:0;transform:translateY(24px)}
+</style></head><body data-page="privacy"><script>document.documentElement.classList.add('js');try{if(!matchMedia('(prefers-reduced-motion: reduce)').matches&&document.body&&document.body.dataset.page==='home')document.documentElement.classList.add('intro')}catch(e){}</script><div class="grain" aria-hidden="true"></div><header class="nav" id="nav"><div class="wrap">
+<a class="mark" href="./" aria-label="Kāsu home"><span class="arch " style="" aria-hidden="true"><span class=rays></span></span><b>Kāsu</b></a>
+<nav class="nav-links" aria-label="Main">
+<a class="opt" href="privacy.html" aria-current="page">Privacy</a>
+<a href="support.html">Support</a>
+<a class="nav-cta" href="./#get">Get the app</a>
+</nav></div></header>
+<main class="sub"><div class="wrap sub-in">
+  <aside class="toc rise" aria-label="On this page"><span>On this page</span><a href="#p-short">The short version</a><a href="#p-collect">What we collect</a><a href="#p-device">What stays on your phone</a><a href="#p-share">Exports and sharing</a><a href="#p-perm">Permissions</a><a href="#p-stores">App stores and email</a><a href="#p-kids">Children</a><a href="#p-rights">Your rights</a><a href="#p-changes">Changes and contact</a></aside>
+  <article class="legal">
+    <header><div class="sub-arch rise" aria-hidden="true"><span class="arch"><span class="rays"></span></span><span class="rule2"></span></div><h1 class="sub-h rise d1">Your spends are <span class="acc">your business.</span></h1><p class="meta rise d2">Effective 12 November 2026 · Applies to the Kāsu apps for iPhone and Android and this website</p></header>
+    <section id="p-short" aria-labelledby="p-short-h"><div class="tldr"><h2 id="p-short-h">The short version</h2><ul><li>Everything you log in Kāsu is stored only on your phone.</li><li>We don't run a server that receives your entries, and we can't see them.</li><li>There's no account, no bank connection, no SMS access and no advertising.</li><li>You can export or erase your data whenever you like.</li></ul></div></section><section id="p-collect" aria-labelledby="p-collect-h"><h2 id="p-collect-h">1. What we collect</h2><p>Kāsu ("we", "us") does not collect, receive or store the expenses, amounts, notes, categories, budgets or payment methods you enter in the app. We do not use analytics, advertising or tracking tools in the app, and we do not build a profile of you.</p></section><section id="p-device" aria-labelledby="p-device-h"><h2 id="p-device-h">2. What stays on your phone</h2><p>The app saves your entries, budget, favourite categories and settings in its own private storage on your device. Your phone's operating system may include this storage in your device backups (iCloud or Google backup), depending on your phone's settings; those backups are handled by Apple or Google under their own privacy policies, not by us.</p><p>If you delete the app or erase your data from inside it, that data is removed from the app on your device. We have no copy we could restore.</p></section><section id="p-share" aria-labelledby="p-share-h"><h2 id="p-share-h">3. Exports and sharing</h2><p>When you export your entries or share a Month Wrapped card, the app creates a file or image and hands it to whichever app or person you choose. Once shared, it is governed by that app's or person's practices. We never receive a copy.</p></section><section id="p-perm" aria-labelledby="p-perm-h"><h2 id="p-perm-h">4. Permissions</h2><p>Kāsu does not ask for access to your SMS, contacts, location, camera, microphone or bank accounts. It only uses your phone's standard share and file pickers when you choose to export, import or share.</p></section><section id="p-stores" aria-labelledby="p-stores-h"><h2 id="p-stores-h">5. App stores, this website and email</h2><p>Apple's App Store and Google Play may share aggregated, anonymised statistics with us, such as download counts and crash rates, under their own terms. This website does not use advertising cookies or trackers. If you email us, we use your email address and message only to reply and keep a record of the conversation, and we delete it on request.</p></section><section id="p-kids" aria-labelledby="p-kids-h"><h2 id="p-kids-h">6. Children</h2><p>Kāsu is not directed at children under 13, and because the app collects nothing about its users, we do not knowingly collect personal data from anyone, including children.</p></section><section id="p-rights" aria-labelledby="p-rights-h"><h2 id="p-rights-h">7. Your rights</h2><p>Depending on where you live, including under India's Digital Personal Data Protection Act, 2023 and the EU and UK GDPR, you may have the right to access, correct, delete or move your personal data, and to complain to a regulator. Your app data is already fully in your hands: you can view, edit, export and erase it in the app. For anything we hold, such as an email you sent us, write to the address below.</p></section><section id="p-changes" aria-labelledby="p-changes-h"><h2 id="p-changes-h">8. Changes and contact</h2><p>If we ever change how Kāsu handles data, for example by adding an optional backup, we will update this page and tell you in the app before the change applies to you.</p><p>Questions or requests: <a href="mailto:privacy@[YOURDOMAIN]">privacy@[YOURDOMAIN]</a><br>Kāsu, Mumbai</p></section>
+  </article>
+</div></main>
+<footer class="foot"><div class="wrap">
+<div class="foot-id"><a class="mark" href="./" aria-label="Kāsu home"><span class="arch " style="" aria-hidden="true"><span class=rays></span></span><b>Kāsu</b></a><span>© 2026 Kāsu. Made in India.</span></div>
+<nav class="foot-links" aria-label="Footer">
+<a href="support.html">Support</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a>
+</nav></div></footer>
+<script>
+(function(){
+  try{ var c=document.createElement('canvas'); c.width=c.height=160; var x=c.getContext('2d'), d=x.createImageData(160,160);
+    for(var i=0;i<d.data.length;i+=4){ var v=170+Math.random()*85|0; d.data[i]=d.data[i+1]=d.data[i+2]=v; d.data[i+3]=255; }
+    x.putImageData(d,0,0); document.documentElement.style.setProperty('--grain','url('+c.toDataURL()+')'); }catch(e){}
+  Array.prototype.forEach.call(document.querySelectorAll('.qa button'),function(b){
+    b.addEventListener('click',function(){ var q=b.closest('.qa'), open=!q.classList.contains('open'); q.classList.toggle('open',open); b.setAttribute('aria-expanded',open?'true':'false'); }); });
+  Array.prototype.forEach.call(document.querySelectorAll('[data-copy]'),function(btn){
+    btn.addEventListener('click',function(){ var t=btn.getAttribute('data-copy');
+      function sel(){ var a=btn.parentNode.querySelector('a'); var r=document.createRange(); r.selectNodeContents(a); var s=getSelection(); s.removeAllRanges(); s.addRange(r); }
+      try{ navigator.clipboard.writeText(t).then(function(){ btn.textContent='Copied'; setTimeout(function(){ btn.textContent='Copy'; },1600); },sel); }catch(e){ sel(); } }); });
+  var secs=document.querySelectorAll('.legal section[id]'), links={};
+  Array.prototype.forEach.call(document.querySelectorAll('.toc a'),function(a){ links[a.getAttribute('href').slice(1)]=a; });
+  if('IntersectionObserver' in window && secs.length){
+    var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+    Array.prototype.forEach.call(secs,function(s){ if(!reduce && s.getBoundingClientRect().top>innerHeight) s.classList.add('hide'); });
+    var rv=new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.remove('hide'); rv.unobserve(e.target); } }); },{rootMargin:'0px 0px -10% 0px'});
+    var hl=new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ for(var k in links) links[k].classList.toggle('on',k===e.target.id); } }); },{rootMargin:'-30% 0px -60% 0px'});
+    Array.prototype.forEach.call(secs,function(s){ rv.observe(s); hl.observe(s); });
+  }
+})();
+</script>
+</body></html>
