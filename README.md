@@ -1,4 +1,4 @@
-# Kasu website
+# Kāsu website
 
 Four static pages. No build step, no server code.
 
